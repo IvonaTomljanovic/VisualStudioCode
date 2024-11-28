@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semafor</title>
+    <style>
+        .semafor{
+            width: 90px;
+            height: 280px;
+            background-color: black;
+            border-radius: 15px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+        .light{
+            width: 80px;
+            height: 80px;
+            margin: 10px auto;
+            border-radius: 50%;
+            background-color: grey;
+        }
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="semafor">
+        <div id="red" class="light"></div>
+        <div id="yellow" class="light"></div>
+        <div id="green" class="light"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
