@@ -1,0 +1,210 @@
+1()
+<!DOCTYPE html>
+<html>
+<head>
+<title> moveBy() metod i resizeBy() metod </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na sledeću dugmad da biste proverili funkcionalnost
+metoda</p>
+<button onclick="otvoriProzor()">Otvori prozor</button>
+<button onclick="pomeriProzor()">Pomeri prozor</button>
+<button onclick="povecajProzor()">Povećaj prozor</button>
+<script>
+let prozor;
+function otvoriProzor() {
+prozor = window.open('', 'prozor', 'width=200, height=100');
+}
+function pomeriProzor() {
+prozor.moveBy(300, 300);
+prozor.focus();
+}
+function povecajProzor() {
+prozor.resizeBy(300, 300);
+prozor.focus();
+}
+</script>
+</body>
+</html>
+
+2()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Confirm prozor </title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<p>Kliknite na dugme kako bi se prikazao confirm prozor u browser-u.</p>
+
+<button onclick="prikaziConfirm()">Prikaži Confirm prozor</button>
+<script>
+function prikaziConfirm() {
+if (confirm('Da li želite da nastavite posetu našem sajtu?'))
+alert('Odgovorili ste OK');
+
+else
+
+alert('Odgovorili ste Cancel');
+}
+</script>
+</body>
+</html>
+
+3()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prompt prozor </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na dugme kako bi se prikazao prompt prozor u browser-u.</p>
+<button onclick="prikaziPrompt()">Prikaži Prompt prozor</button>
+<script>
+// Postoje različiti načini korišćenja prompt prozora
+let noviOdgovor = '';
+noviOdgovor = window.prompt(); // otvara prazan prompt window
+noviOdgovor = prompt(); // otvara prazan prompt window
+noviOdgovor = window.prompt('Da li želite da vam saljemo nove informacije sa sajta'); 
+noviOdgovor = window.prompt('Da li želite da vam šaljemo nove informacije sa sajta?', 'Da');
+function prikaziPrompt() {
+let odgovor = prompt('Koliko imate godina?');
+if (odgovor < 18)
+alert('Vi ste maloletna osoba!');
+else
+alert('Vi ste punoletna osoba!');
+}
+</script>
+</body>
+</html>
+
+4()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Popup prozor </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na dugme kako bi se otvorio novi prozor u browser-u.</p>
+<button onclick="otvoriPopupProzor()">Prikaži Popup prozor</button>
+<script>
+let noviProzor;
+let windowFeatures =
+'width=500,height=300,resizable=yes,scrollbars=yes';
+function otvoriPopupProzor() {
+noviProzor = window.open('http://www.etspupin.edu.rs/',
+'ETSPupin', windowFeatures);
+}
+</script>
+</body>
+</html>
+
+5()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Popup prozor - Drugi primer </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na dugme kako bi se otvorio novi prozor u browser-u.</p>
+<button onclick="otvoriPopupProzor()">Prikaži Popup prozor</button>
+<script>
+let noviProzor;
+function otvoriPopupProzor() {
+noviProzor = window.open('http://www.etspupin.edu.rs/');
+}
+</script>
+</body>
+</html>
+
+6()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Popup prozor - Treći primer </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na dugme kako bi se otvorio novi prozor u browser-u.</p>
+<button onclick="otvoriPopupProzor()">Prikaži Popup prozor</button>
+<script>
+let noviProzor;
+function otvoriPopupProzor() {
+noviProzor = window.open('');
+}
+</script>
+</body>
+</html>
+
+7()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Close() metod </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na dugme da bi se zatvorio trenutno otvoreni prozor</p>
+<button onclick="zatvoriProzor()">Zatvori prozor</button>
+<script>
+function zatvoriProzor() {
+close();
+}
+</script>
+</body>
+</html>
+
+8()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Open() i Close() metod </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na sledeću dugmad da biste otvori a potom zatvorili
+prozor.</p>
+<button onclick="otvoriProzor()">Otvori prozor</button>
+<button onclick="zatvoriProzor()">Zatvori prozor</button>
+<script>
+let noviProzor;
+function otvoriProzor() {
+noviProzor = open('http://www.etspupin.edu.rs/', '',
+'width=200, height=300, scrollbars=yes');
+}
+function zatvoriProzor() {
+noviProzor.close();
+}
+</script>
+</body>
+</html>
+
+9()
+<!DOCTYPE html>
+<html>
+<head>
+<title> Open() i Close() metod - Drugi primer </title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Kliknite na sledeću dugmad da biste otvori a potom zatvorili
+prozor.</p>
+<button onclick="otvoriProzor()">Otvori prozor</button>
+<button onclick="zatvoriProzor()">Zatvori prozor</button>
+<script>
+let ETSPupin;
+function otvoriProzor() {
+ETSPupin = open('http://www.etspupin.edu.rs/', 'ETSPupin',
+'width=200, height=300, scrollbars=yes');
+}
+function zatvoriProzor() {
+ETSPupin.close();
+}
+</script>
+</body>
+</html>
